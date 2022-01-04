@@ -1,144 +1,169 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
+  /* Primary  */
 
-    /* Primary  */
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
 
-    --soft-blue: hsl(215, 51%, 70%);
-    --cyan:  hsl(178, 100%, 50%);
+  /* Neutral */
 
-    /* Neutral */
+  --main-bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
 
-    --main-bg: hsl(217, 54%, 11%);
-    --card-bg: hsl(216, 50%, 16%);
-    --line: hsl(215, 32%, 27%);
-    --white:  hsl(0, 0%, 100%);
+  /* Font size */
 
-    /* Font size */
+  --paragraph: 18px;
 
-    --paragraph: 18px;
+  /* Font family  */
 
-    /* Font family  */
-
-    --font-family: 'Courier New', Courier, monospace;
+  --font-family: "Outfit", sans-serif;
 }
-
-
 
 body {
-    background-color: var(--main-bg);
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  background-color: var(--main-bg);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family);
 }
 
-.main-container {
-    outline: 1px solid white;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-}
 
 .container {
-    outline: 1px solid yellow;
-    height: 540px;
-    width: 90%;
-    margin: 0 auto;
-    background-color: var(--card-bg);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  height: 540px;
+  width: 90%;
+  margin: 0 auto;
+  background-color: var(--card-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
 }
 
 .sub-container {
-    outline: 1px solid pink;
-    width: 90%;
-    margin: 0 auto;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.body-image {
+  position: relative;
+}
+
+.background {
+  background: var(--cyan);
+  width: 99%;
+  height: 274px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-top: 20px;
 }
 
 .equilibrium {
-    width: 100%;
-    height: 275px;
+  width: 100%;
+  height: 275px;
+  object-fit: cover;
+}
+
+.equilibrium:hover {
+  transition: 0.2s ease-in-out;
+
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.view {
+  position: absolute;
+  top: 38%;
+  left: 42%;
+  visibility: hidden;
+}
+
+.equilibrium:hover .view {
+  visibility: visible;
 }
 
 .equilibrium-span {
-    padding: 20px 0;
-    color: var(--white);
+  padding: 20px 0;
+  color: var(--white);
+}
+
+.equilibrium-span:hover {
+  cursor: pointer;
+  color: var(--cyan);
 }
 
 p {
-    font-size: var(--paragraph);
-    line-height: 23px;
-    color: var(--soft-blue);
+  font-size: var(--paragraph);
+  line-height: 23px;
+  color: var(--soft-blue);
 }
 
 .item {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
 }
 
 .sub-item {
-    display: flex;
+  display: flex;
 }
 
 .span-1 {
-    font-weight: bold;
-    padding-left: 5px;
-    color: var(--cyan);
+  font-weight: bold;
+  padding-left: 5px;
+  color: var(--cyan);
+  display: block ruby;
 }
 
+.span-1:hover {
+  cursor: pointer;
+}
 .clock {
-    padding-right: 5px;
+  padding-right: 5px;
 }
 
 .span-2 {
-    color: var(--soft-blue);
-    display: block ruby;
+  color: var(--soft-blue);
+  display: block ruby;
 }
 
 hr {
-    color: var(--line);
+  color: var(--line);
 }
 
 .profile {
-    display: flex;
-    padding: 15px 0;
+  display: flex;
+  padding: 15px 0;
+  align-items: center;
 }
 
 .avater {
-    width: 30px;
-    height: 30px;
-    padding-right: 10px;
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+  border: 1px solid var(--white);
+  border-radius: 50%;
 }
 
 .creation {
-    color: var(--soft-blue)
+  color: var(--soft-blue);
 }
 
 .juliet {
-    color: var(--white);
+  color: var(--white);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.juliet:hover {
+  cursor: pointer;
+  color: var(--cyan);
+}
