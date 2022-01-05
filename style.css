@@ -37,9 +37,8 @@ body {
   font-family: var(--font-family);
 }
 
-
 .container {
-  height: 540px;
+  height: 600px;
   width: 90%;
   margin: 0 auto;
   background-color: var(--card-bg);
@@ -51,7 +50,7 @@ body {
 }
 
 .sub-container {
-  width: 90%;
+  width: 87%;
   margin: 0 auto;
 }
 
@@ -62,39 +61,61 @@ body {
 .background {
   background: var(--cyan);
   width: 99%;
-  height: 274px;
+  height: 300px;
   overflow: hidden;
   border-radius: 10px;
-  margin-top: 20px;
+  
 }
 
-.equilibrium {
-  width: 100%;
-  height: 275px;
-  object-fit: cover;
-}
-
-.equilibrium:hover {
-  transition: 0.2s ease-in-out;
-
-  cursor: pointer;
-  opacity: 0.5;
-}
-
-.view {
+.background::before {
+  content: " " url(/images/icon-view.svg);
   position: absolute;
   top: 38%;
   left: 42%;
   visibility: hidden;
 }
 
-.equilibrium:hover .view {
+.background:hover::before {
+  content: " " url(/images/icon-view.svg);
+  position: absolute;
+  top: 38%;
+  left: 42%;
   visibility: visible;
+  cursor: pointer;
+  /* z-index: 1; */
+  transition: .2 ease-in-out;
+
+}
+
+.equilibrium {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.equilibrium::before {
+  content: " " url(/images/icon-view.svg);
+}
+
+.equilibrium:hover {
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  opacity: 0.3;
 }
 
 .equilibrium-span {
   padding: 20px 0;
+  font-size: 25px;
+  font-weight: 600 ;
+}
+
+.equilibrium-span a {
+  text-decoration: none;
   color: var(--white);
+}
+
+.equilibrium-span a:hover {
+  color: var(--cyan);
 }
 
 .equilibrium-span:hover {
@@ -139,18 +160,19 @@ p {
 
 hr {
   color: var(--line);
+  background-color: var(--line);
 }
 
 .profile {
   display: flex;
-  padding: 15px 0;
+  padding: 20px 0 0 0;
   align-items: center;
 }
 
 .avater {
   width: 35px;
   height: 35px;
-  margin-right: 10px;
+  margin-right: 20px;
   border: 1px solid var(--white);
   border-radius: 50%;
 }
@@ -167,3 +189,8 @@ hr {
   cursor: pointer;
   color: var(--cyan);
 }
+
+.profile, p {
+  font-size: var(--paragraph);
+}
+
